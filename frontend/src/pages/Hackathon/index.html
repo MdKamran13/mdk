@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIR Filing System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>FIR Assistance Portal</h1>
+        <p>Helping you identify if FIR filing is needed</p>
+    </header>
+
+    <section id="problems-list">
+        <h2>Issues That Do Not Require an FIR</h2>
+        <ul>
+            <li>Lost Items (e.g., wallet, mobile)</li>
+            <li>Neighborhood Disturbances</li>
+            <li>Petty Verbal Disputes</li>
+            <li>Parking Complaints</li>
+            <li>Minor Public Nuisance</li>
+        </ul>
+    </section>
+
+    <section id="auth-form">
+        <h2>Authenticate Yourself</h2>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="incident-form" style="display:none;">
+        <h2>Report an Incident</h2>
+        <form id="incidentForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="text" id="contact" placeholder="Contact Number" required>
+            <textarea id="incidentDetails" placeholder="Describe the Incident" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

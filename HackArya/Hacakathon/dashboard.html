@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | FIR Assistance Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">FIR Assistance</div>
+        <ul class="nav-links">
+            <li><a href="#problems">Problems</a></li>
+            <li><a href="#report">Report Incident</a></li>
+            <li><a href="index.html" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <header class="dashboard-header">
+        <h1>Welcome to the FIR Assistance Portal</h1>
+        <p>Check whether your problem needs an FIR or can be solved otherwise.</p>
+    </header>
+
+    <section id="problems" class="problems-section">
+        <h2>Common Problems</h2>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <h3>Lost Items</h3>
+                <p>Lost mobile, wallet, ID cards? You can file a missing report instead of FIR.</p>
+            </div>
+            <div class="problem-card">
+                <h3>Noise Complaints</h3>
+                <p>For neighborhood noise issues, a simple police complaint can be enough.</p>
+            </div>
+            <div class="problem-card">
+                <h3>Parking Issues</h3>
+                <p>Wrong parking usually needs municipal action, not an FIR.</p>
+            </div>
+            <div class="problem-card">
+                <h3>Verbal Disputes</h3>
+                <p>Petty verbal arguments can often be solved by a local mediator.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="report" class="report-section">
+        <h2>Report an Incident</h2>
+        <form id="incidentForm">
+            <input type="text" id="fullName" placeholder="Your Full Name" required>
+            <input type="text" id="contact" placeholder="Contact Number" required>
+            <textarea id="incidentDetails" placeholder="Describe the incident here..." required></textarea>
+            <button type="submit">Submit Incident</button>
+        </form>
+    </section>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

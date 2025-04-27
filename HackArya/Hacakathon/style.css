@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+}
+
+/* Login Page */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-container button:hover {
+    background-color: #003580;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #004aad;
+    padding: 15px 30px;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.dashboard-header p {
+    color: #555;
+}
+
+/* Problems Section */
+.problems-section {
+    padding: 30px;
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.problem-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Report Section */
+.report-section {
+    padding: 30px;
+}
+
+.report-section form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.report-section input,
+.report-section textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.report-section button {
+    padding: 12px;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.report-section button:hover {
+    background-color: #003580;
+}

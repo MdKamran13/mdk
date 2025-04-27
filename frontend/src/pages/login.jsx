@@ -1,0 +1,78 @@
+import { useState } from "react";
+
+export default function LoginPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Login submitted", { email, password });
+    // Here you can add API call logic
+  };
+
+  return (
+    <div
+      className="flex min-h-screen bg-cover bg-center"
+      style={{
+        backgroundImage: "url('https://source.unsplash.com/1600x900/?technology,abstract')",
+      }}
+    >
+      {/* Left Side Image */}
+      <div className="hidden md:flex w-1/2 items-center justify-center">
+        <img
+          src="https://source.unsplash.com/600x800/?technology,login"
+          alt="Login"
+          className="object-cover w-full h-full rounded-r-3xl shadow-2xl"
+        />
+      </div>
+
+      {/* Right Side Form */}
+      <div className="flex flex-col justify-center items-center w-full md:w-1/2 bg-white/80 p-10 rounded-l-3xl shadow-2xl">
+        <h2 className="text-4xl font-extrabold text-gray-800 mb-8">Welcome Back</h2>
+        <form onSubmit={handleSubmit} className="w-full max-w-md">
+          <div className="mb-6">
+            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-400"
+              required
+            />
+          </div>
+
+          <div className="mb-6">
+            <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-400"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition duration-300"
+          >
+            Log In
+          </button>
+
+          <p className="text-center text-gray-500 text-sm mt-6">
+            Don't have an account?{" "}
+            <a href="#" className="text-blue-500 hover:underline">
+              Sign Up
+            </a>
+          </p>
+        </form>
+      </div>
+    </div>
+  );
+}
